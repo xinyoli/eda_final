@@ -1,5 +1,5 @@
 import json 
-from pprint import pprint
+# from pprint import pprint
 
 with open('testcase/map_in.json', 'r') as file_in:
     dict = json.load(file_in)
@@ -29,3 +29,20 @@ for name in names:
 # file_out = open('./testcase/test_out.json','w')
 # json.dump(dict,file_out,sort_keys=True,indent=4,separators=(',', ': '))
 
+
+
+# mapped_ = dict.fromkeys(names_)
+# mapper.PrintDict(mapped_)
+
+# print("none"," = ",dict['none'])
+for name_ in names_:
+	if name_ in dict_:
+		print(name_, dict_[name_])
+		# mapped_ = dict.fromkeys(name_,dict_[name_])
+	
+# mapper.PrintDict(mapped_)
+
+for name_ in names_:
+	if name_ in dict_:
+		# print(name_, dict_[name_])
+		mapped_[name_] = dict_[name_]
