@@ -16,5 +16,5 @@ for name_ in names_:
 	
 mapper.PrintDict(mapped_)
 		
-file_out = open('./testcase/test_out.json','w')
-json.dump(mapped_,file_out,sort_keys=True,indent=4,separators=(',', ': '))
+file_out = open('./testcase/names/test_out.json','w')
+json.dump(mapped_,file_out,sort_keys=True,indent=4,separators=(',', ' : '))

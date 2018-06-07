@@ -1,7 +1,7 @@
 import json
 
 def GetDict():
-	with open('testcase/map_in.json', 'r') as file_in:
+	with open('testcase/map_in/map_in.json', 'r') as file_in:
 		dict = json.load(file_in)
 	return dict
 
@@ -12,7 +12,7 @@ def PrintDict(dict):
 	print()
 		
 def GetNames():
-	with open('testcase/names.json', 'r') as file_in:
+	with open('testcase/names/names.json', 'r') as file_in:
 		nameset = json.load(file_in)
 	return nameset[0]
 	
