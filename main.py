@@ -1,9 +1,9 @@
 import mapper
 import json
 
-map_in_fname = "map_in.json"
-names_fname = "names_0607.json"
-map_out_fname = "test_out.json"
+map_in_fname = "case4.json"
+names_fname = "names_case4.json"
+map_out_fname = "case4_out.json"
 
 dict_ = mapper.GetDict(map_in_fname)
 print("dict file name: ",map_in_fname)
