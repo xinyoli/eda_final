@@ -1,4 +1,16 @@
 import json
+import mapper
+
+map_in_fname = "case4.json"
+dict_ = mapper.GetDict(map_in_fname)
+
+argument_string = \
+"""
+names_fname = "names_case4.json"
+map_out_fname = "case4_out.json"
+
+dict_ = \
+"""
 
 mapper_string = \
 """
@@ -36,18 +48,12 @@ def MapName(dict_,names_,map_out_fname = "map_out.json",mapped_ = {}):
 			mapped_[name_] = dict_[name_]
 
 	print("map_out file name: ",map_out_fname)	
-"""
 
-argument_string = \
-"""
-map_in_fname = "case4.json"
-names_fname = "names_case4.json"
-map_out_fname = "case4_out.json"
+map_in_fname = "\
 """
 
 main_string = \
 """
-dict_ = GetDict(map_in_fname)
 print("dict file name: ",map_in_fname)
 PrintDict(dict_)
 
@@ -66,5 +72,7 @@ json.dump(mapped_,file_out,sort_keys=True,indent=4,separators=(',', ' : '))
 
 with open("script.py", 'w') as the_script: 
 	the_script.write(mapper_string)
+	the_script.write("%s%s" % ("map_in.json","\""))
 	the_script.write(argument_string)
+	the_script.write(str(dict_))
 	the_script.write(main_string)
