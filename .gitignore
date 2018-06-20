@@ -1,2 +1,3 @@
 cases8.tgz
 __pycache__/
+*.pyc

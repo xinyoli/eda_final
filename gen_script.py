@@ -1,13 +1,13 @@
 import json
 import mapper
 
-map_in_fname = "case4.json"
+map_in_fname = "map_in.json"
 dict_ = mapper.GetDict(map_in_fname)
 
 argument_string = \
 """
-names_fname = "names_case4.json"
-map_out_fname = "case4_out.json"
+names_fname = "names.json"
+map_out_fname = "map_out.json"
 
 dict_ = \
 """

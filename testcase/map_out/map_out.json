@@ -6,5 +6,6 @@
     "a[cat]" : "a1",
     "a[dog]" : "a0",
     "b[cat]" : "b1",
-    "b[dog]" : "b0"
+    "b[dog]" : "b0",
+    "start_signal_[1]" : "start_signal_[1]_numberone"
 }
