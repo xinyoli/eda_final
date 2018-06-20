@@ -2,8 +2,8 @@ import mapper
 import json
 from random import shuffle
 
-map_in_fname = "case8.json"
-names_fname = "names_case8.json"
+map_in_fname = "map_in.json"
+names_fname = "names.json"
 
 
 dict_ = mapper.GetDict(map_in_fname)
