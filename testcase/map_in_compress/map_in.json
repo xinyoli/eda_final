@@ -7,19 +7,19 @@
  "a[dog]":"a0",
  "b[cat]":"b1",
  "b[dog]":"b0",
- "enable[1]":"enable[1]",
- "enable[3]":"enable[3]",
- "enable[5]":"enable[5]",
+ "enable[1]":true,
+ "enable[3]":true,
+ "enable[5]":true,
  "start_signal_[1]":[
-  1,
+  0,
   "_numberone"
  ],
- "stop[2]":"stop[2]",
- "stop[5]":"stop[5]",
- "stop[66]":"stop[66]",
- "stop[78]":"stop[78]",
- "stop[78c]":"stop[78c]",
- "stop[7c8]":"stop[7c8]",
- "stop[c78]":"stop[c78]",
- "stop[ccc78]":"stop[ccc78]"
+ "stop[2]":true,
+ "stop[5]":true,
+ "stop[66]":true,
+ "stop[78]":true,
+ "stop[78c]":true,
+ "stop[7c8]":true,
+ "stop[c78]":true,
+ "stop[ccc78]":true
 }

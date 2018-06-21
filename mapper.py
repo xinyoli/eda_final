@@ -24,20 +24,22 @@ def PrintNames(names):
 		print(name)
 	print()
 		
-def MapName(dict_,arr_name_dict_,names_,map_out_fname = "map_out.json",mapped_ = {}):
+def MapName(dict_,names_,map_out_fname = "map_out.json",mapped_ = {}):
 	print("initialize file: ",map_out_fname)	
 	PrintDict(mapped_)
 
 	for name_ in names_:
 		if name_ in dict_:
-			if dict_[name_][0] is 0 :
-				for m in re.finditer("\[+[0-9]+\]$", name_):
-					number_ = name_[m.start(0)+1:m.end(0)-1]
-					value_name_ = name_[:m.start(0)]
-				mapped_[name_] = arr_name_dict_[]
+			if dict_[name_] is True :
+				mapped_[name_] = name_
 			elif dict_[name_][0] is 1 :
 				mapped_[name_] = "%s%s" % (name_,dict_[name_][1])
 			else : 
 				mapped_[name_] = dict_[name_]
+			# elif :
+				# for m in re.finditer("\[+[0-9]+\]$", name_):
+					# number_ = name_[m.start(0)+1:m.end(0)-1]
+					# value_name_ = name_[:m.start(0)]
+				# mapped_[name_] = arr_name_dict_[]
 
 	print("map_out file name: ",map_out_fname)	

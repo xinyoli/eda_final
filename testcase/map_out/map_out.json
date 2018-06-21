@@ -10,7 +10,10 @@
  "enable[1]":"enable[1]",
  "enable[3]":"enable[3]",
  "enable[5]":"enable[5]",
- "start_signal_[1]":"start_signal_[1]_numberone",
+ "start_signal_[1]":[
+  0,
+  "_numberone"
+ ],
  "stop[2]":"stop[2]",
  "stop[5]":"stop[5]",
  "stop[66]":"stop[66]",
