@@ -1,13 +1,19 @@
 import json
 import mapper
+import re 
 
-map_in_fname = "case4.json"
+map_in_fname = "case1.json"
 dict_ = mapper.GetDict(map_in_fname)
-
+for keys,values in dict_.items():
+	if keys == values :
+		dict_[keys] = True
+	elif values.find(keys) == 0 and len(keys) != len(values):
+		dict_[keys] = [0, values[len(keys):len(values)]]
+		
 argument_string = \
 """
-names_fname = "names_case4.json"
-map_out_fname = "case4_out.json"
+names_fname = "names_case1.json"
+map_out_fname = "case1_out.json"
 
 dict_ = \
 """
@@ -15,9 +21,9 @@ dict_ = \
 mapper_string = \
 """
 import json
+import re 
 
 def GetDict(map_in_fname = "map_in.json"):
-	# with open("testcase/map_in/map_in.json", 'r') as file_in:
 	with open("%s%s" % ("testcase/map_in/",map_in_fname), 'r') as file_in:
 		dict = json.load(file_in)
 	return dict
@@ -45,7 +51,12 @@ def MapName(dict_,names_,map_out_fname = "map_out.json",mapped_ = {}):
 
 	for name_ in names_:
 		if name_ in dict_:
-			mapped_[name_] = dict_[name_]
+			if dict_[name_] is True :
+				mapped_[name_] = name_
+			elif dict_[name_][0] is 0 :
+				mapped_[name_] = "%s%s" % (name_,dict_[name_][1])
+			else : 
+				mapped_[name_] = dict_[name_]
 
 	print("map_out file name: ",map_out_fname)	
 

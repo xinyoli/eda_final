@@ -2,9 +2,9 @@ import mapper
 import json
 import re 
 
-map_in_fname = "map_in.json"
-names_fname = "names.json"
-map_out_fname = "map_out.json"
+map_in_fname = "case8.json"
+names_fname = "names_case8.json"
+map_out_fname = "case8_out.json"
 
 dict_ = mapper.GetDict(map_in_fname)
 
